@@ -1,0 +1,97 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="jquery-1.11.0.min.js" type="text/javascript"></script>
+<link href="jquery.mobile-1.4.3.min.css" rel="stylesheet" type="text/css">
+<script src="jquery.mobile-1.4.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="Smecherie.css"/>
+<link rel="stylesheet" type="text/css" href="TemaMea.css"/>
+
+<script type="text/javascript">
+
+
+	function dist(){
+		var n1=document.getElementById("north1").value;
+		var e1=document.getElementById("east1").value;
+		var n2=document.getElementById("north2").value;
+		var e2=document.getElementById("east2").value;
+		var nx1=parseFloat(n1);
+		var ex1=parseFloat(e1);
+		var nx2=parseFloat(n2);
+		var ex2=parseFloat(e2);
+		if (n1==""||e1==""||n2==""||e2=="")
+			alert("You did not complete all the fields!!!");
+		else if (n1==0||e1==0||n2==0||e2==0)
+			alert("Please enter another value. The 0 value is not accepted!!!");
+		else
+			var rez=Math.sqrt(Math.pow(nx1-nx2,2)+Math.pow(ex1-ex2,2));
+			var rez2=rez.toFixed(3);
+			document.getElementById("resDist").innerHTML = rez2;
+
+	}
+	function reset(){
+	
+		document.getElementById("north1").value="";
+		document.getElementById("east1").value="";
+		document.getElementById("north2").value="";
+		document.getElementById("east2").value="";
+	}
+	
+
+
+
+</script>
+
+
+</head>
+
+<body style="background:black">
+	<p style="color:white">1st Point</p>
+	<table style="width:100%">
+		<tr >
+			<td style="width:20%"><p style="color:white">North</p></td>
+			<td><input id="north1" type="text"></td>
+		
+		</tr>
+		<tr>
+			<td><p style="color:white">East</p></td>
+			<td><input id="east1" type="text"></td>
+		
+		</tr>
+	</table>
+	
+	<p style="color:white">2nd Point</p>
+	<table style="width:100%">
+		<tr>
+			<td style="width:20%"><p style="color:white">North</p></td>
+			<td><input id="north2" type="text"></td>
+		
+		</tr>
+		<tr>
+			<td><p style="color:white">East</p></td>
+			<td><input id="east2" type="text"></td>
+		
+		</tr>
+	</table>
+	
+	<div id="butoane"  data-role="controlgroup"  data-type="horizontal">
+	
+	<a id="btnReset" style="200px" onclick="reset()" class="ui-btn">Reset</a>
+	
+	<a id="btnCalcDist" style="200px" onclick="dist()" class="ui-btn">Calculate</a>
+
+	<a id="btnHome" style="200px" href="index.html" data-transition="flip" class="ui-btn">Home</a>
+	</div>
+	<table style="width:100%">
+		<tr>
+			<td style="width:20%"><p style="color:white">Result:</p></td>
+			<td style="width:20%"><p id="resDist" style="color:white"></p></td> 
+		
+		</tr>
+	</table>
+	
+	
+</body>
+
+</html>
