@@ -10,15 +10,15 @@
 		var e1=document.getElementById("east1").value;
 		var n2=document.getElementById("north2").value;
 		var e2=document.getElementById("east2").value;
-		var nx1=parseFloat(n1);
-		var ex1=parseFloat(e1);
-		var nx2=parseFloat(n2);
-		var ex2=parseFloat(e2);
-		//if (nx1==""||ex1==""||nx2==""||ex2=="")
-		//	alert("You did not complete all the fields!!!");
-		//else if (nx1==0||ex1==0||nx2==0||ex2==0)
-		//	alert("Please enter another value. The 0 value is not accepted!!!");
-	//	else
+		var nx1=parseInt(n1);
+		var ex1=parseInt(e1);
+		var nx2=parseInt(n2);
+		var ex2=parseInt(e2);
+		if (nx1==""||ex1==""||nx2==""||ex2=="")
+			alert("You did not complete all the fields!!!");
+		else if (nx1==0||ex1==0||nx2==0||ex2==0)
+			alert("Please enter another value. The 0 value is not accepted!!!");
+		else
 			var rez=Math.sqrt((Math.pow((nx1-nx2),2))+(Math.pow((ex1-ex2),2)));
 			var rez2=rez.toFixed(3);
 			document.getElementById("resDist").innerHTML = rez2;
