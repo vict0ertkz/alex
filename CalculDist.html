@@ -14,11 +14,11 @@
 		var ex1=parseFloat(e1);
 		var nx2=parseFloat(n2);
 		var ex2=parseFloat(e2);
-		if (nx1==""||ex1==""||nx2==""||ex2=="")
-			alert("You did not complete all the fields!!!");
-		else if (nx1==0||ex1==0||nx2==0||ex2==0)
-			alert("Please enter another value. The 0 value is not accepted!!!");
-		else
+		//if (nx1==""||ex1==""||nx2==""||ex2=="")
+		//	alert("You did not complete all the fields!!!");
+		//else if (nx1==0||ex1==0||nx2==0||ex2==0)
+		//	alert("Please enter another value. The 0 value is not accepted!!!");
+	//	else
 			var rez=Math.sqrt((Math.pow((nx1-nx2),2))+(Math.pow((ex1-ex2),2)));
 			var rez2=rez.toFixed(3);
 			document.getElementById("resDist").innerHTML = rez2;
@@ -71,9 +71,9 @@
 	
 	<div id="butoane"  data-role="controlgroup"  data-type="horizontal">
 	
-	<a id="btnReset" style="width:200px;color:green" onclick="reset()" class="ui-btn">Reset</a>
+	<button type="button" id="btnReset" style="width:200px;color:green" onclick="reset()" class="ui-btn">Reset</button>
 	
-	<a id="btnCalcDist" style="width:200px;color:green" onclick="dist()" class="ui-btn">Calculate</a>
+	<button  type="button" id="btnCalcDist" style="width:200px;color:green" onclick="dist()" class="ui-btn">Calculate</button>
 
 	<a id="btnHome" style="width:200px;color:green" href="index.html" data-transition="flip" class="ui-btn">Home</a>
 	</div>
