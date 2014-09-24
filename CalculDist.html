@@ -19,7 +19,7 @@
 		else if (nx1==0||ex1==0||nx2==0||ex2==0)
 			alert("Please enter another value. The 0 value is not accepted!!!");
 		else
-			var rez=Math.sqrt(Math.pow((nx1-nx2),2)+Math.pow((ex1-ex2),2));
+			var rez=Math.sqrt((Math.pow((nx1-nx2),2))+(Math.pow((ex1-ex2),2)));
 			var rez2=rez.toFixed(3);
 			document.getElementById("resDist").innerHTML = rez2;
 
